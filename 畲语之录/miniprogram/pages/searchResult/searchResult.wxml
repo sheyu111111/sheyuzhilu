@@ -1,0 +1,10 @@
+<!--pages/searchResult/searchResult.wxml-->
+<view wx:if="{{isEmpty}}" class="empty">暂未收录，尽请期待~
+<image src="/images/empty@3x.png"></image>
+</view>
+<view bindtap="play" class="play" wx:else>
+  <view class = "meaning">语义：{{Lname}}
+  <image src="/images/ze-volume@3x.png" class="volume + {{shine ? 'shine' : ''}}" style="--speed: 1.5s" ></image>
+  </view>
+  <view class = "phoneticSign">音标：{{Lphonetic}}</view>
+</view>

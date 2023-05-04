@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<view class="search">
+    <image class="search-icon" src="/images/mb-search@3x.png"></image>
+    <input class="search-content" placeholder="点击搜索" auto-focus="true"></input>
+</view>
+<view class="swiper-box">
+    <swiper indicator-dots="true" indicator-active-color="#ffa500" autoplay="true" circular="true">
+        <swiper-item wx:for="{{localImages}}" wx:key="*this">
+          <image src="{{item}}" class="local-image" mode="aspectFill"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="active-part">
+  <view class="active">
+    <image src="cloud://cloud1-2g1ahtye45db4b81.636c-cloud1-2g1ahtye45db4b81-1317017498/首页轮播图/凤凰装.JPG" class="active-image"></image>
+    <text>畲族科普--凤凰装</text>
+  </view>
+  <view class="active">
+    <image src="cloud://cloud1-2g1ahtye45db4b81.636c-cloud1-2g1ahtye45db4b81-1317017498/首页轮播图/三月三.JPG" class="active-image" mode="aspectFill"></image>
+    <text>三月三的由来</text>
+  </view>
+  <view class="active">
+    <image src="cloud://cloud1-2g1ahtye45db4b81.636c-cloud1-2g1ahtye45db4b81-1317017498/首页轮播图/关于畲族.JPG" class="active-image" mode="aspectFill"></image>
+    <text>关于畲族</text>
+  </view>
+  <view class="active">
+    <image src="cloud://cloud1-2g1ahtye45db4b81.636c-cloud1-2g1ahtye45db4b81-1317017498/首页轮播图/18.JPG" class="active-image" mode="aspectFill"></image>
+    <text>深圳红罗畲族村</text>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="search">
+    <image class="search-icon" src="/images/mb-search@3x.png"></image>
+    <input class="search-content" placeholder="点击搜索" auto-focus="true" bindinput="searchContent" value="{{searchContentStr}}"></input>
+    <image src="/images/clear@3x.png" class="clear-all" catchtap="clearAll"></image>
+    <view class="search-button" bindtap="goSearch">搜 索</view>
+</view>
+<view class="header" wx:if="{{isHeader&&(!isList)}}">
+    <text>历史记录：</text>
+    <image src="/images/iconPark-delete@3x.png" class="delete" catchtap="clearHistory"></image>
+</view>
+<view wx:if="{{isHeader&&(!isList)}}" class="historySearch">
+  <view wx:for="{{historyList}}" class="searchTag" catchtap="goSearch2" data-name= "{{item}}">{{item}}</view>
+</view>
+<view wx:for="{{searchList}}"  class="search-list" wx:for-index="i">
+  <text data-name="{{item.Lname}}" catchtap="goSearch2">{{item.Lname}}</text>
+</view>
